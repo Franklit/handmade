@@ -11,37 +11,141 @@
   outline: 0 !important;
 }
 
+nav {
+  width: 100%;
+  position: fixed;
+  background-color: white;
+  z-index: 100;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
 nav div {
   width: 200px;
   height: 150px;
   margin: 0 auto;
   background-color: purple;
+  position: relative;
+}
+
+nav #checkbox1, nav .toggle {
+  display: none;
 }
 
 nav ul {
-  width: 100%x;
+  height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: pink;
-}
-
-nav ul li {
-  display: inline;
-  margin: 10px 50px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
 }
 
 nav ul li a {
   text-decoration: none;
-  color: red;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 10px 15px;
+  -webkit-transition: background .2s linear;
+  transition: background .2s linear;
 }
 
-.top, .jewelry, .cards, .cups, .contact {
+@media screen and (max-width: 550px) {
+  nav .toggle {
+    clear: both;
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    line-height: 40px;
+    cursor: pointer;
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    color: #595959;
+    background: #dbdbdb;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    -webkit-transition: all .1s linear;
+    transition: all .1s linear;
+  }
+  nav .toggle:hover {
+    background: #cecece;
+  }
+  nav #checkbox1:checked + label ul li {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: all .7s linear;
+    transition: all .7s linear;
+  }
+  nav #checkbox1:checked + label ul {
+    height: 200px;
+  }
+  nav ul {
+    border-radius: 0px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 0px;
+    -webkit-transition: height .3s linear;
+    transition: height .3s linear;
+  }
+  nav ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* magic */
+    -ms-flex-item-align: center;
+        align-self: center;
+    width: 95%;
+    opacity: 0;
+    visibility: hidden;
+  }
+  nav ul li a {
+    width: 95%;
+    text-align: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+}
+
+.jewelry, .cards, .cups, .contact {
   height: 100vh;
   background-color: #909090;
   border-top: 1px solid black;
+}
+
+.top {
+  position: relative;
+  height: 100vh;
+  background-image: url("../foto/top.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 /*# sourceMappingURL=style.css.map */

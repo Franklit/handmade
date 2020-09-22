@@ -19,3 +19,19 @@ const smoothScroll = (e)=>{
 
 
 navbarLinks.forEach(elem => elem.addEventListener('click', smoothScroll));
+
+
+//shrink navbar
+
+
+const logo = document.querySelector('nav div');
+const nav = document.querySelector('nav');
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    // if(document.documentElement.scrollTop > 80){
+    //     nav.style.top = '-100px'
+    // }
+    document.documentElement.scrollTop > 80 ? nav.style.top = '-150px' : nav.style.top = '0px'
+}
