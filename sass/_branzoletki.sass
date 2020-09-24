@@ -1,0 +1,52 @@
+.branzoletki
+    background-color: $colorBggray
+    h1
+        @include h1()
+    .gallery
+        width: 1053px
+        margin: 0 auto
+        background-color: $colorBggray
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-around        
+        a
+            width: 30%
+            max-width: 300px
+            height: 200px
+            overflow: hidden
+            opacity: .8
+            border: 2px solid $colorOrange
+
+            margin: 10px
+            &:hover
+                opacity: 1
+
+            img
+                width: 100%
+                height: 100%
+                transition: transform .5s ease
+                &:hover
+                    transform: scale(1.2)
+
+@media screen and ( max-width: 1160px  )
+    .branzoletki
+        .gallery
+            width: 950px
+            .a
+                .img
+    
+@media screen and ( max-width: 995px  )
+    .branzoletki
+        .gallery
+            width: 720px
+            a
+                width: 40%   
+
+@media screen and ( max-width: 750px  )
+    .branzoletki
+        .gallery
+            width: 100%
+            a
+                width: 60%
+                min-width: 300px
+                max-width: 300px

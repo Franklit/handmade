@@ -21,11 +21,17 @@ nav {
 }
 
 nav div {
-  width: 200px;
-  height: 150px;
+  height: 100px;
   margin: 0 auto;
-  background-color: purple;
+  background-color: #f5f5fa;
   position: relative;
+}
+
+nav div h1 {
+  font-size: 100px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
 }
 
 nav #checkbox1, nav .toggle {
@@ -47,6 +53,11 @@ nav ul {
       -ms-flex-align: center;
           align-items: center;
   list-style-type: none;
+  background-color: #eca720;
+}
+
+nav ul li {
+  font-family: "Roboto", sans-serif;
 }
 
 nav ul li a {
@@ -56,9 +67,15 @@ nav ul li a {
       align-self: center;
   border-radius: 5px;
   font-size: 14px;
+  font-weight: 300;
   padding: 10px 15px;
   -webkit-transition: background .2s linear;
   transition: background .2s linear;
+  color: white;
+}
+
+nav ul li a:hover {
+  font-weight: 500;
 }
 
 @media screen and (max-width: 550px) {
@@ -72,15 +89,16 @@ nav ul li a {
     width: 100%;
     height: 40px;
     font-size: 18px;
-    color: #595959;
-    background: #dbdbdb;
+    color: white;
+    background: #eca720;
+    opacity: .8;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     -webkit-transition: all .1s linear;
     transition: all .1s linear;
   }
   nav .toggle:hover {
-    background: #cecece;
+    opacity: 1;
   }
   nav #checkbox1:checked + label ul li {
     opacity: 1;
@@ -118,12 +136,12 @@ nav ul li a {
     /* magic */
     -ms-flex-item-align: center;
         align-self: center;
-    width: 95%;
+    width: 100%;
     opacity: 0;
     visibility: hidden;
   }
   nav ul li a {
-    width: 95%;
+    width: 100%;
     text-align: center;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
@@ -133,10 +151,8 @@ nav ul li a {
   }
 }
 
-.jewelry, .cards, .cups, .contact {
-  height: 100vh;
-  background-color: #909090;
-  border-top: 1px solid black;
+.kolczyki, .branzoletki, .kartki, .contact {
+  min-height: 100vh;
 }
 
 .top {
@@ -147,5 +163,223 @@ nav ul li a {
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.top h1 {
+  width: 250px;
+  text-align: center;
+  background-color: #eca720;
+  border-radius: 10px;
+}
+
+.top h1 a {
+  text-decoration: none;
+  color: black;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  opacity: 1;
+}
+
+.kolczyki {
+  background-color: #ffffff;
+}
+
+.kolczyki h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 50px;
+  color: #eca720;
+  padding-top: 75px;
+  margin-bottom: 50px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+}
+
+.kolczyki .gallery {
+  width: 1053px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.kolczyki .gallery a {
+  width: 30%;
+  max-width: 300px;
+  height: 200px;
+  overflow: hidden;
+  opacity: .8;
+  border: 2px solid #eca720;
+  margin: 10px;
+}
+
+.kolczyki .gallery a:hover {
+  opacity: 1;
+}
+
+.kolczyki .gallery a img {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease;
+}
+
+.kolczyki .gallery a img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+@media screen and (max-width: 1160px) {
+  .kolczyki .gallery {
+    width: 950px;
+  }
+}
+
+@media screen and (max-width: 995px) {
+  .kolczyki .gallery {
+    width: 720px;
+  }
+  .kolczyki .gallery a {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .kolczyki .gallery {
+    width: 100%;
+  }
+  .kolczyki .gallery a {
+    width: 60%;
+    min-width: 300px;
+    max-width: 300px;
+  }
+}
+
+.branzoletki {
+  background-color: #f5f5fa;
+}
+
+.branzoletki h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 50px;
+  color: #eca720;
+  padding-top: 75px;
+  margin-bottom: 50px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+}
+
+.branzoletki .gallery {
+  width: 1053px;
+  margin: 0 auto;
+  background-color: #f5f5fa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.branzoletki .gallery a {
+  width: 30%;
+  max-width: 300px;
+  height: 200px;
+  overflow: hidden;
+  opacity: .8;
+  border: 2px solid #eca720;
+  margin: 10px;
+}
+
+.branzoletki .gallery a:hover {
+  opacity: 1;
+}
+
+.branzoletki .gallery a img {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease;
+}
+
+.branzoletki .gallery a img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+@media screen and (max-width: 1160px) {
+  .branzoletki .gallery {
+    width: 950px;
+  }
+}
+
+@media screen and (max-width: 995px) {
+  .branzoletki .gallery {
+    width: 720px;
+  }
+  .branzoletki .gallery a {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .branzoletki .gallery {
+    width: 100%;
+  }
+  .branzoletki .gallery a {
+    width: 60%;
+    min-width: 300px;
+    max-width: 300px;
+  }
+}
+
+.kartki {
+  background-color: #ffffff;
+}
+
+.kartki h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 50px;
+  color: #eca720;
+  padding-top: 75px;
+  margin-bottom: 50px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+}
+
+.contact {
+  background-color: #f5f5fa;
+}
+
+.contact h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 50px;
+  color: #eca720;
+  padding-top: 75px;
+  margin-bottom: 50px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
 }
 /*# sourceMappingURL=style.css.map */
