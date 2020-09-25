@@ -93,7 +93,7 @@ const followNav = ()=> {
         navbarLinksArr[0].classList.add('active');
     }
     
-
+    document.documentElement.scrollTop > 20 ? arrowDown.style.display = "none" : arrowDown.style.display = "block"
 };
 
 window.addEventListener('scroll', followNav)

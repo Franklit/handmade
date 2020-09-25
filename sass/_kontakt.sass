@@ -1,29 +1,73 @@
+.bottom
+    width: 100%
+    height: 50px
+    background-color: $colorOrange
+    margin-top: 50px
+    // position: absolute
+    // bottom: 0   
+
+
 .contact
     background-color: $colorBggray
+    position: relative
+    min-width: 400px
+    
+    div
+        width: 100%
+        text-align: center
+        padding-top: 75px    
+        font-family: $roboto
+        letter-spacing: 5px
     h1
         @include h1()
     .socialMedia
         width: 1053px
         margin: 0 auto
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-around
+        text-align: center
+        letter-spacing: 0
+        // flex-direction: column
+        // justify-content: center
+        // justify-content: center 
         p
+            width: 80%
+            margin-bottom: 100px
             font-family: $roboto
-            width: 60%
-            margin: 0 auto
-            text-align: center
-        .media
-            width: 60%
-            margin: 0 auto
-            height: 100px
-            // background-color: #777777
-            min-width: 400px
-            text-align: center
-            display: flex
-            flex-direction: column
+            font-size: 25px
+            text-align: justify
+        a
+            width: 21%
+
             i
-                font-size: 80px
+                width: 100%
+                font-size: 100px
                 color: $colorOrange
-            span
-                font-family: $roboto
+                position: relative
+            
+                    
+                &::after
+                    position: absolute
+                    top: 100%
+                    // transform: translateX(-100%)
+                    left: 50%
+                    font-size: $roboto
+                    font-weight: 100
+                    transform: translateX(-50%)
+                    font-size: 30px
+                    content: ''
+            .phone
+                &::after
+                    content: '555-222-111'
+                    width: 110%
+            .fb
+                &::after
+                    content: '/CudeNusia'
+            .at
+                &::after
+                    content: 'nusia@spoko.pl'   
+
 
 
 @media screen and ( max-width: 1160px  )
@@ -31,17 +75,30 @@
         .socialMedia
             width: 950px
             p
-                width: 70%
-            .media
-                width: 70%
+                width: 100%
+                padding: 0 10%
+            a
+                width: 20%
+                i
+                    font-size: 60px
+                    &::after
+                        font-size: 25px
+
 @media screen and ( max-width: 995px  )
     .contact
         .socialMedia
             width: 720px
             p
-                width: 80%
-            .media
-                width: 80%
+                width: 100%
+                // padding: 0 10%
+                font-size: 20px
+                margin-bottom:  60px
+            a
+                width: 21%
+                i
+                    font-size: 60px
+                    &::after
+                        font-size: 20px
 
 @media screen and ( max-width: 750px  )
     .contact
@@ -49,8 +106,13 @@
             width: 100%
             p
                 width: 90%
-            .media
-                width: 90%
+            a
+                width: 21%
+                i
+                    font-size: 60px
+                    // margin-bottom: 40px
+                    &::after
+                        font-size: 20px
                 
 
 

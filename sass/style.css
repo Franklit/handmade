@@ -264,15 +264,23 @@ nav ul li .active {
   background-color: #ffffff;
 }
 
+.kolczyki div {
+  width: 100%;
+  text-align: center;
+  padding-top: 75px;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 5px;
+}
+
 .kolczyki h1 {
   width: 100%;
   text-align: center;
   font-size: 50px;
   color: #eca720;
-  padding-top: 75px;
   margin-bottom: 50px;
   font-family: "Roboto", sans-serif;
   font-weight: 100;
+  position: relative;
 }
 
 .kolczyki .gallery {
@@ -346,12 +354,19 @@ nav ul li .active {
   background-color: #f5f5fa;
 }
 
+.branzoletki div {
+  width: 100%;
+  text-align: center;
+  padding-top: 75px;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 5px;
+}
+
 .branzoletki h1 {
   width: 100%;
   text-align: center;
   font-size: 50px;
   color: #eca720;
-  padding-top: 75px;
   margin-bottom: 50px;
   font-family: "Roboto", sans-serif;
   font-weight: 100;
@@ -428,19 +443,110 @@ nav ul li .active {
   background-color: #ffffff;
 }
 
+.kartki div {
+  width: 100%;
+  text-align: center;
+  padding-top: 75px;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 2px;
+}
+
 .kartki h1 {
   width: 100%;
   text-align: center;
   font-size: 50px;
   color: #eca720;
-  padding-top: 75px;
   margin-bottom: 50px;
   font-family: "Roboto", sans-serif;
   font-weight: 100;
 }
 
+.kartki .gallery {
+  width: 1053px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.kartki .gallery a {
+  width: 30%;
+  max-width: 300px;
+  height: 200px;
+  overflow: hidden;
+  opacity: .8;
+  border: 2px solid #eca720;
+  margin: 10px;
+}
+
+.kartki .gallery a:hover {
+  opacity: 1;
+}
+
+.kartki .gallery a img {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease;
+}
+
+.kartki .gallery a img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+@media screen and (max-width: 1160px) {
+  .kartki .gallery {
+    width: 950px;
+  }
+}
+
+@media screen and (max-width: 995px) {
+  .kartki .gallery {
+    width: 720px;
+  }
+  .kartki .gallery a {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .kartki .gallery {
+    width: 100%;
+  }
+  .kartki .gallery a {
+    width: 60%;
+    min-width: 300px;
+    max-width: 300px;
+  }
+}
+
+.bottom {
+  width: 100%;
+  height: 50px;
+  background-color: #eca720;
+  margin-top: 50px;
+}
+
 .contact {
   background-color: #f5f5fa;
+  position: relative;
+  min-width: 400px;
+}
+
+.contact div {
+  width: 100%;
+  text-align: center;
+  padding-top: 75px;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 5px;
 }
 
 .contact h1 {
@@ -448,7 +554,6 @@ nav ul li .active {
   text-align: center;
   font-size: 50px;
   color: #eca720;
-  padding-top: 75px;
   margin-bottom: 50px;
   font-family: "Roboto", sans-serif;
   font-weight: 100;
@@ -457,37 +562,59 @@ nav ul li .active {
 .contact .socialMedia {
   width: 1053px;
   margin: 0 auto;
-}
-
-.contact .socialMedia p {
-  font-family: "Roboto", sans-serif;
-  width: 60%;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.contact .socialMedia .media {
-  width: 60%;
-  margin: 0 auto;
-  height: 100px;
-  min-width: 400px;
-  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+  letter-spacing: 0;
 }
 
-.contact .socialMedia .media i {
-  font-size: 80px;
-  color: #eca720;
-}
-
-.contact .socialMedia .media span {
+.contact .socialMedia p {
+  width: 80%;
+  margin-bottom: 100px;
   font-family: "Roboto", sans-serif;
+  font-size: 25px;
+  text-align: justify;
+}
+
+.contact .socialMedia a {
+  width: 21%;
+}
+
+.contact .socialMedia a i {
+  width: 100%;
+  font-size: 100px;
+  color: #eca720;
+  position: relative;
+}
+
+.contact .socialMedia a i::after {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  font-size: "Roboto", sans-serif;
+  font-weight: 100;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 30px;
+  content: '';
+}
+
+.contact .socialMedia a .phone::after {
+  content: '555-222-111';
+  width: 110%;
+}
+
+.contact .socialMedia a .fb::after {
+  content: '/CudeNusia';
+}
+
+.contact .socialMedia a .at::after {
+  content: 'nusia@spoko.pl';
 }
 
 @media screen and (max-width: 1160px) {
@@ -495,10 +622,17 @@ nav ul li .active {
     width: 950px;
   }
   .contact .socialMedia p {
-    width: 70%;
+    width: 100%;
+    padding: 0 10%;
   }
-  .contact .socialMedia .media {
-    width: 70%;
+  .contact .socialMedia a {
+    width: 20%;
+  }
+  .contact .socialMedia a i {
+    font-size: 60px;
+  }
+  .contact .socialMedia a i::after {
+    font-size: 25px;
   }
 }
 
@@ -507,10 +641,18 @@ nav ul li .active {
     width: 720px;
   }
   .contact .socialMedia p {
-    width: 80%;
+    width: 100%;
+    font-size: 20px;
+    margin-bottom: 60px;
   }
-  .contact .socialMedia .media {
-    width: 80%;
+  .contact .socialMedia a {
+    width: 21%;
+  }
+  .contact .socialMedia a i {
+    font-size: 60px;
+  }
+  .contact .socialMedia a i::after {
+    font-size: 20px;
   }
 }
 
@@ -521,8 +663,14 @@ nav ul li .active {
   .contact .socialMedia p {
     width: 90%;
   }
-  .contact .socialMedia .media {
-    width: 90%;
+  .contact .socialMedia a {
+    width: 21%;
+  }
+  .contact .socialMedia a i {
+    font-size: 60px;
+  }
+  .contact .socialMedia a i::after {
+    font-size: 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */
