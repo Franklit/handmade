@@ -1,4 +1,4 @@
-console.log('siema eniu')
+
 
 
 // smooth scroll
@@ -6,6 +6,7 @@ console.log('siema eniu')
 const navMenu = document.querySelector('nav ul');
 const navbarLinks = document.querySelectorAll('nav ul a');
 // const navbarLinksArr = [...navbarLinks];
+const burger = document.querySelector('.toggle')
 
 
 const smoothScroll = (e)=>{
@@ -15,6 +16,9 @@ const smoothScroll = (e)=>{
         top: document.querySelector(targetId).offsetTop,
         behavior: 'smooth'
     })
+
+    
+    burger.click()
 }
 
 
@@ -37,12 +41,59 @@ function scrollFunction() {
 }
 
 
-// checkProduct
-const checkProduct = document.querySelector(' .top h1 a'); 
+// arrow Down
+const arrowDown = document.querySelector('.top a'); 
 
-checkProduct.addEventListener('click', ()=>{
+arrowDown.addEventListener('click', ()=>{
     window.scrollTo({
         top: document.querySelector(`#kolczyki`).offsetTop,
         behavior: 'smooth'
     })
 });
+
+
+
+
+
+const navbarMenu = document.querySelector('nav ul');
+
+// const navbarLinks = document.querySelectorAll('nav ul a');
+const navbarLinksArr = [...navbarLinks];
+
+const start = document.querySelector('.top');
+const kolczyki = document.querySelector('.kolczyki');
+const branzoletki = document.querySelector('.branzoletki');
+const kartki = document.querySelector('.kartki');
+const kontakt = document.querySelector('.contact');
+
+
+
+
+//nav follow offsetTop
+
+const followNav = ()=> {
+    
+    const scrollPosition = document.documentElement.scrollTop;
+    navbarLinksArr.forEach(elem => elem.classList.remove('active'))
+
+    if((scrollPosition>=kolczyki.offsetTop)&&(scrollPosition<branzoletki.offsetTop)){
+        navbarLinksArr[1].classList.add('active');
+        console.log('osiem')
+    }
+    else if((scrollPosition>=branzoletki.offsetTop)&&(scrollPosition<kartki.offsetTop)){
+        navbarLinksArr[2].classList.add('active');
+    }
+    else if((scrollPosition>=kartki.offsetTop)&&(scrollPosition<kontakt.offsetTop)){
+        navbarLinksArr[3].classList.add('active');
+    }
+    else if((scrollPosition>=kontakt.offsetTop)){
+        navbarLinksArr[4].classList.add('active');
+    }
+    else{
+        navbarLinksArr[0].classList.add('active');
+    }
+    
+
+};
+
+window.addEventListener('scroll', followNav)

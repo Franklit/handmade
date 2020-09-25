@@ -2,3 +2,75 @@
     background-color: $colorBggray
     h1
         @include h1()
+    .socialMedia
+        width: 1053px
+        margin: 0 auto
+        p
+            font-family: $roboto
+            width: 60%
+            margin: 0 auto
+            text-align: center
+        .media
+            width: 60%
+            margin: 0 auto
+            height: 100px
+            // background-color: #777777
+            min-width: 400px
+            text-align: center
+            display: flex
+            flex-direction: column
+            i
+                font-size: 80px
+                color: $colorOrange
+            span
+                font-family: $roboto
+
+
+@media screen and ( max-width: 1160px  )
+    .contact
+        .socialMedia
+            width: 950px
+            p
+                width: 70%
+            .media
+                width: 70%
+@media screen and ( max-width: 995px  )
+    .contact
+        .socialMedia
+            width: 720px
+            p
+                width: 80%
+            .media
+                width: 80%
+
+@media screen and ( max-width: 750px  )
+    .contact
+        .socialMedia
+            width: 100%
+            p
+                width: 90%
+            .media
+                width: 90%
+                
+
+
+
+
+
+
+
+// @media screen and ( max-width: 995px  )
+//     .kolczyki
+//         .gallery
+//             width: 720px
+//             a
+//                 width: 40%   
+
+// @media screen and ( max-width: 750px  )
+//     .kolczyki
+//         .gallery
+//             width: 100%
+//             a
+//                 width: 60%
+//                 min-width: 300px
+//                 max-width: 300px

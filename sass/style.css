@@ -22,16 +22,20 @@ nav {
 
 nav div {
   height: 100px;
-  margin: 0 auto;
-  background-color: #f5f5fa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 5px;
+  background-color: #f0b94d;
   position: relative;
 }
 
-nav div h1 {
-  font-size: 100px;
-  text-align: center;
-  font-family: "Roboto", sans-serif;
-  font-weight: 100;
+nav div img {
+  width: 300px;
+  height: 90px;
 }
 
 nav #checkbox1, nav .toggle {
@@ -66,7 +70,7 @@ nav ul li a {
       -ms-grid-row-align: center;
       align-self: center;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 300;
   padding: 10px 15px;
   -webkit-transition: background .2s linear;
@@ -78,7 +82,13 @@ nav ul li a:hover {
   font-weight: 500;
 }
 
-@media screen and (max-width: 550px) {
+nav ul li .active {
+  font-weight: 500;
+  text-shadow: 0px 0px 10px #3a3131;
+  font-size: 24px;
+}
+
+@media screen and (max-width: 600px) {
   nav .toggle {
     clear: both;
     display: block;
@@ -107,12 +117,10 @@ nav ul li a:hover {
     transition: all .7s linear;
   }
   nav #checkbox1:checked + label ul {
-    height: 200px;
+    height: 300px;
   }
   nav ul {
     border-radius: 0px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -172,21 +180,84 @@ nav ul li a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.top h1 {
+.centerTop {
+  position: relative;
   width: 250px;
-  text-align: center;
-  background-color: #eca720;
-  border-radius: 10px;
+  height: 80px;
+  background-color: rgba(240, 185, 77, 0.702);
+  border-radius: 30px;
+  font-family: "Roboto", sans-serif;
 }
 
-.top h1 a {
-  text-decoration: none;
-  color: black;
-  font-family: "Roboto", sans-serif;
+.centerTop h1 {
+  position: absolute;
+  color: white;
+  font-size: 50px;
+  width: 100%;
+  text-align: center;
+  line-height: 60px;
   font-weight: 300;
-  opacity: 1;
+}
+
+.centerTop span {
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  text-align: center;
+  color: black;
+}
+
+.centerTop i {
+  position: absolute;
+  top: 100%;
+  font-size: 50px;
+  color: #f0b94db3;
+  width: 100%;
+  text-align: center;
+  -webkit-animation: bounce 2s ease infinite;
+          animation: bounce 2s ease infinite;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: .7;
+  }
+  50% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: .7;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: .7;
+  }
+  50% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: .7;
+  }
 }
 
 .kolczyki {
@@ -381,5 +452,77 @@ nav ul li a:hover {
   margin-bottom: 50px;
   font-family: "Roboto", sans-serif;
   font-weight: 100;
+}
+
+.contact .socialMedia {
+  width: 1053px;
+  margin: 0 auto;
+}
+
+.contact .socialMedia p {
+  font-family: "Roboto", sans-serif;
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact .socialMedia .media {
+  width: 60%;
+  margin: 0 auto;
+  height: 100px;
+  min-width: 400px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact .socialMedia .media i {
+  font-size: 80px;
+  color: #eca720;
+}
+
+.contact .socialMedia .media span {
+  font-family: "Roboto", sans-serif;
+}
+
+@media screen and (max-width: 1160px) {
+  .contact .socialMedia {
+    width: 950px;
+  }
+  .contact .socialMedia p {
+    width: 70%;
+  }
+  .contact .socialMedia .media {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 995px) {
+  .contact .socialMedia {
+    width: 720px;
+  }
+  .contact .socialMedia p {
+    width: 80%;
+  }
+  .contact .socialMedia .media {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .contact .socialMedia {
+    width: 100%;
+  }
+  .contact .socialMedia p {
+    width: 90%;
+  }
+  .contact .socialMedia .media {
+    width: 90%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
