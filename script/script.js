@@ -73,7 +73,7 @@ const kontakt = document.querySelector('.contact');
 
 const followNav = ()=> {
     
-    const scrollPosition = document.documentElement.scrollTop;
+    const scrollPosition = Math.ceil(document.documentElement.scrollTop)+1;
     navbarLinksArr.forEach(elem => elem.classList.remove('active'))
 
     if((scrollPosition>=kolczyki.offsetTop)&&(scrollPosition<branzoletki.offsetTop)){

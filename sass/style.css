@@ -163,6 +163,10 @@ nav ul li .active {
   min-height: 100vh;
 }
 
+.cbalink {
+  display: none;
+}
+
 .top {
   position: relative;
   height: 100vh;
@@ -541,6 +545,16 @@ nav ul li .active {
   min-width: 400px;
 }
 
+.contact footer {
+  width: 100%;
+  height: 50px;
+  background-color: #eca720;
+  position: absolute;
+  bottom: 0;
+  color: white;
+  text-align: center;
+}
+
 .contact div {
   width: 100%;
   text-align: center;
@@ -583,6 +597,7 @@ nav ul li .active {
 
 .contact .socialMedia a {
   width: 21%;
+  height: 100px;
 }
 
 .contact .socialMedia a i {
@@ -672,5 +687,30 @@ nav ul li .active {
   .contact .socialMedia a i::after {
     font-size: 20px;
   }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+  background-color: #eca720;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px #eca720;
+          box-shadow: inset 0 0 5px #eca720;
+  border-radius: 10px;
+  background: white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #eca720;
+  opacity: .7;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #bd861a;
 }
 /*# sourceMappingURL=style.css.map */
