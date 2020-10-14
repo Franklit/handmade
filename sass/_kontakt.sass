@@ -9,119 +9,173 @@
 
 .contact
     background-color: $colorBggray
-    position: relative
-    min-width: 400px
-    footer
-        width: 100%
-        height: 50px
-        background-color: $colorOrange
-        position: absolute
-        bottom: 0
-        color: white
-        text-align: center
-    div
+    // position: relative
+    // min-width: 400px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    .head
+
+    .napisz
         width: 100%
         text-align: center
         padding-top: 75px    
         font-family: $roboto
         letter-spacing: 5px
+    img
+        width: 250px
+        max-width: 100%
+
     h1
         @include h1()
-    .socialMedia
-        width: 1053px
-        margin: 0 auto
+        margin: 0
+    footer
+        width: 100%
+        background-color:#eca720
+        height: 50px
+        padding-top: 5px
         display: flex
-        flex-wrap: wrap
-        justify-content: space-around
-        text-align: center
-        letter-spacing: 0
-        // flex-direction: column
-        // justify-content: center
-        // justify-content: center 
-        p
-            width: 80%
-            margin-bottom: 100px
-            font-family: $roboto
-            font-size: 25px
-            text-align: justify
-        a
-            width: 21%
-            height: 100px
-            // padding-bottom: 50px
+        justify-content: center
 
-            i
-                width: 100%
-                font-size: 100px
-                color: $colorOrange
+        i
+            color: white 
+            opacity: 0.6
+            cursor: pointer
+            font-size: 40px
+            margin: 0 15px 0 15px
+            transition: .5s
+            &:hover
+                opacity: 1
+            
+    .container-form
+        background-color: #eaeaf3
+        width: 600px
+        max-width: 100%
+        padding: 20px 20px 50px 20px
+        border-radius: 5px
+        font-family: $roboto
+        color: #eca720
+        .header
+            // padding: 20px
+        .form
+
+            #wiadomosc
+                height: 100px
+            .form-control
+
                 position: relative
             
-                    
-                &::after
+                label
+                    display: inline-block
+                    // margin-bottom: 5px
+                input
+                    border: 1px solid #eca720
+                    border-radius: 5px
+                    // background-color: 
+                    display: block
+                    width: 100%
+                    height: 30px
+                    margin-bottom: 15px
+                    // padding: 10px
+                i
                     position: absolute
-                    top: 100%
-                    // transform: translateX(-100%)
+                    // top: 40px
+                    top: 50%
+                    right: 10px
+                    visibility: hidden
+                small
+                    position: absolute
+                    bottom: 10% 
                     left: 50%
-                    font-size: $roboto
-                    font-weight: 100
                     transform: translateX(-50%)
-                    font-size: 30px
-                    content: ''
-            .phone
-                &::after
-                    content: '555-222-111'
-                    width: 110%
-            .fb
-                &::after
-                    content: '/CudeNusia'
-            .at
-                &::after
-                    content: 'nusia@spoko.pl'   
+                    visibility: hidden
+                    // color: red
+            .form-control.success 
+                input
+                    // border-color: #00c700
+                    border: 3px solid #00c700
+                    // background-color: #00c700
+                i.fa-check-circle
+                    visibility: visible
+                    color: #00c700
+
+            .form-control.error 
+                input
+                    border: 3px solid #ee4b4b
+                    // background-color: #ee4b4b
+                    // background-color: red 
+                i.fa-exclamation-circle
+                    visibility: visible
+                    color: red    
+                small
+                    visibility: visible
+                    color: #ee4b4b
+                    font-size: 15px      
+        button
+            background-color: #eca720
+            position: absolute
+    
+            left: 50%
+            transform: translateX(-50%)
+            color: black
+            border: none
+            width: 50px
+            height: 35px
+            font-size: 15px
+            border-radius: 2px
+            color: white
+            cursor: pointer
+                
+
+            
 
 
 
-@media screen and ( max-width: 1160px  )
-    .contact
-        .socialMedia
-            width: 950px
-            p
-                width: 100%
-                padding: 0 10%
-            a
-                width: 20%
-                i
-                    font-size: 60px
-                    &::after
-                        font-size: 25px
 
-@media screen and ( max-width: 995px  )
-    .contact
-        .socialMedia
-            width: 720px
-            p
-                width: 100%
-                // padding: 0 10%
-                font-size: 20px
-                margin-bottom:  60px
-            a
-                width: 21%
-                i
-                    font-size: 60px
-                    &::after
-                        font-size: 20px
+// @media screen and ( max-width: 1160px  )
+//     .contact
+//         .socialMedia
+//             width: 950px
+//             p
+//                 width: 100%
+//                 padding: 0 10%
+//             a
+//                 width: 20%
+//                 i
+//                     font-size: 60px
+//                     &::after
+//                         font-size: 25px
 
-@media screen and ( max-width: 750px  )
-    .contact
-        .socialMedia
-            width: 100%
-            p
-                width: 90%
-            a
-                width: 21%
-                i
-                    font-size: 60px
-                    // margin-bottom: 40px
-                    &::after
-                        font-size: 20px
+// @media screen and ( max-width: 995px  )
+//     .contact
+//         .socialMedia
+//             width: 720px
+//             p
+//                 width: 100%
+//                 // padding: 0 10%
+//                 font-size: 20px
+//                 margin-bottom:  60px
+//             a
+//                 width: 21%
+//                 i
+//                     font-size: 60px
+//                     &::after
+//                         font-size: 20px
+
+// @media screen and ( max-width: 750px  )
+//     .contact
+//         .socialMedia
+//             width: 100%
+//             p
+//                 width: 90%
+//             a
+//                 width: 21%
+//                 i
+//                     font-size: 60px
+//                     // margin-bottom: 40px
+//                     &::after
+//                         font-size: 20px
                 
 
 

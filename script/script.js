@@ -97,3 +97,95 @@ const followNav = ()=> {
 };
 
 window.addEventListener('scroll', followNav)
+
+
+
+
+//form validation
+
+const form = document.getElementById('form');
+const imie = document.getElementById('imie');
+
+const email = document.getElementById('email');
+const telefon = document.getElementById('telefon');
+const wiadomosc = document.getElementById('wiadomosc');
+
+form.addEventListener('submit', (e)=>{
+    e.preventDefault();
+
+    checkInputs();
+})
+
+function checkInputs() {
+
+    const imieValue = imie.value.trim();
+    const emailValue = email.value.trim();
+    const telefonValue = telefon.value.trim();
+    const wiadomoscValue = wiadomosc.value.trim();
+
+
+    if(imieValue === ""){
+        setErrorFor(imie, 'Podaj imie')
+    }else{
+        setSuccesFor(imie)
+    }
+
+    if(emailValue === ''){
+        setErrorFor(email, 'Podaj email')
+    }else if(!isEmail(emailValue)){
+        setErrorFor(email, "email jest niepoprawny")
+    }
+    else{
+        setSuccesFor(email)
+    }
+    if(telefonValue === ''){
+        setErrorFor(telefon, 'Podaj numer tel')
+    }else if(!isTelefon(telefonValue)){
+        setErrorFor(telefon, "telefon jest niepoprawny")
+    }else{
+        setSuccesFor(telefon)
+    }
+    if(wiadomoscValue === ''){
+        setErrorFor(wiadomosc, 'Napisz wiadomosc')
+    }else if(wiadomoscValue.length < 25){
+        setErrorFor(wiadomosc, "Za mało znaków")
+    }else{
+        setSuccesFor(wiadomosc)
+    }
+
+
+
+    }
+
+
+function setErrorFor(input, message){
+    const formControl = input.parentElement;
+    const small = formControl.querySelector('small');
+
+    //add error message inside small
+    small.innerText = message;
+
+    //add error class
+    formControl.className = 'form-control error'
+}
+
+function setSuccesFor(input){
+    const formControl = input.parentElement;
+    formControl.className = 'form-control success'
+}
+
+function isEmail(email){
+    return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)
+
+}
+
+function isTelefon(telefon){
+    if(telefon.length <=9){
+
+        return /\d{9}/.test(telefon)
+    }
+    else{
+        return false
+    }
+}
+
