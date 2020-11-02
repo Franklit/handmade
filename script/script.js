@@ -26,17 +26,12 @@ navbarLinks.forEach(elem => elem.addEventListener('click', smoothScroll));
 
 
 //shrink navbar
-
-
 const logo = document.querySelector('nav div');
 const nav = document.querySelector('nav');
 
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-    // if(document.documentElement.scrollTop > 80){
-    //     nav.style.top = '-100px'
-    // }
     document.documentElement.scrollTop > 80 ? nav.style.top = '-100px' : nav.style.top = '0px'
 }
 
@@ -56,8 +51,6 @@ arrowDown.addEventListener('click', ()=>{
 
 
 const navbarMenu = document.querySelector('nav ul');
-
-// const navbarLinks = document.querySelectorAll('nav ul a');
 const navbarLinksArr = [...navbarLinks];
 
 const start = document.querySelector('.top');
@@ -97,8 +90,6 @@ const followNav = ()=> {
 };
 
 window.addEventListener('scroll', followNav)
-
-
 
 
 //form validation
